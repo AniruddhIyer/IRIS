@@ -1,0 +1,140 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Final Prototype</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-item">
+                <img id="logo" src="images/logo.png">
+                <!-- <div class="search"><i class="fa fa-search" id="search"></i><span id="search">Search</span></div> -->
+            </div>
+            <div class="nav-item-right">
+                <div class="nav-item">
+                    <div class="nav-item-align">
+                        <img class="nav-icon" src="icons/HomeIcon.svg">
+                        <div class="nav-item-name">Home</div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-item-align">
+                        <img class="nav-icon" src="icons/RFIIcon.svg">
+                        <div class="nav-item-name">RFI History</div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-item-align">
+                        <div class="dropdown">
+                            <img class="nav-icon" src="icons/NotificationIcon.svg"><span class="badge">1</span>
+                            <div class="nav-item-name">Notifications <i class="fa fa-caret-down"></i></div>
+                            <div class="dropdown-content sidebar-font">
+                                <a href="#">
+                                    <div>
+                                        <img id="logo" src="icons/Avionics.svg">
+                                    </div>
+                                    <div class="dropdown-text">
+                                        Clara resolved the post "Model Inputs". 
+                                    </div>
+                                    <div>
+                                        1m
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div>
+                                        <img id="logo" src="icons/Avionics.svg">
+                                    </div>
+                                    <div class="dropdown-text">
+                                        Clara commented on the post "Model Inputs".
+                                    </div>
+                                    <div>
+                                        1hr
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div>
+                                        <img id="logo" src="icons/Avionics.svg">
+                                    </div>
+                                    <div class="dropdown-text">
+                                        Clara started a post on your Usage Context, "Uniform Margin of Error"
+                                    </div>
+                                    <div>
+                                        4hr
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div>
+                                        <img id="logo" src="icons/LoadsNDynamics.svg">
+                                    </div>
+                                    <div class="dropdown-text">
+                                        Loads and Dynamics added a new usage context to 3.3.1 R.SLS_0009
+                                    </div>
+                                    <div>
+                                        1d
+                                    </div>
+                                </a>
+                                <a href="#">
+                                        <div></div>
+                                        <div style="text-align: center">See all</div>
+                                        <div></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <div class="nav-item-align">
+                        <img class="nav-icon" src="icons/ProfileIcon.svg">
+                        <div class="nav-item-name">Profile</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="sidebar sidebar-font">
+            <div class="sidebar-title">My Requirements <i class="fa fa-caret-down"></i></div>
+            <a href="#" class="link-block active">2.6.1 R.SLS_0041</a>
+            <a href="#" class="link-block">2.6.2 R.SLS_0061</a>
+            <a href="#" class="link-block">2.6.3 R.SLS_0009</a>
+            <a href="#" class="link-block">3.3.1 R.SLS_0012</a>
+            <div class="sidebar-title">Following <i class="fa fa-caret-right"></i></div>
+            <a href="#" id="BottomBrowse">Browse all requirements</a>
+        </div>
+        <div class="main-section">
+            <div class="top-section">
+                <div style="position: relative;">
+                    <span class="page-title">Uniform Margin of Error</span><img id="logo" style="position: absolute; bottom: 0;" src="icons/VehicleManagement.svg"><span class="by-line">By Vehicular Management <span style="color: #8963f8">(Your Team)</span>
+                </div>
+                <div style="margin-top:10px; margin-bottom:20px;">
+                    <span class="req-code">2.6.1 R.SLS_0041</span><span class="card-title" style="margin-left: 20px;">The TVC shall have 40,000 pounds of force ± 500 pounds</span><img class="link-icon" src="icons/Link.svg">
+                </div> 
+            </div>
+            <div class="bottom-section">
+                <span class="card-title" style="margin-left:60px;">Version 1</span><img class="link-icon" src="icons/VersionHistory.svg">
+                <div class="detail-box">
+                    <table>
+                        <tr>
+                            <th>Requirement Interpretation:</th>
+                            <td>The margin of error (± 500 pounds) has uniform distribution.</td>
+                        </tr>
+                        <tr>
+                            <th>Verification Documentation:</th>
+                            <td>
+                                DMM-CSE-0431-01 RS-25 CSE Performance Model – Power Level Tags
+                                <div>
+                                    <img id="logo" src="icons/Connections.svg"><img id="logo" src="icons/AddBtn.svg">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Rationale for Use:</th>
+                            <td>Assuming a uniform distribution of ±500 pounds allows us to quickly calculate uncertainty estimates.</td>
+                        </tr>
+                    </table>
+                    <img id="edit-btn" src="icons/Edit.svg">
+                    <img class="discussion-img" src="Discussions/Start.svg">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
