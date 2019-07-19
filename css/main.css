@@ -14,7 +14,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-color: #001862;
-    /* position: fixed; */
+    position: fixed;
+    width: 100%;
+    z-index: 1;
 }
 .nav-item{
     align-items: center;
@@ -78,6 +80,7 @@ nav{
     position:fixed!important;
     z-index:1;
     overflow:auto;
+    top: 4rem;
 }
 .sidebar-font{
     font-family: 'PublicSans';
@@ -122,6 +125,7 @@ nav{
     background-color: #FAFAFA;
     min-height: 100%;
     overflow: hidden;
+    padding: 4rem 0 0;
 }
 .top-section{                                   /* Top Section Classes*/
     background-color: #FFFFFF;
@@ -176,6 +180,8 @@ nav{
     width: 90%;
     border: 0.1em solid #EDEDED;
     margin-bottom:30px;
+    box-sizing: border-box;
+    border-radius: 4px;
 }
 table{
     margin-left: 10px;
@@ -183,9 +189,8 @@ table{
 }
 th{
     text-align: right;
-
 }
-th,td,{
+th,td{
     padding: 5px;
     font-family: Orkney;
     font-size: 14px;
@@ -201,6 +206,10 @@ th,td,{
 }
 #edit-btn:hover{
     cursor: pointer;
+}
+.align-btns{
+    margin-left: 10px;
+    height: 2rem;
 }
 .discussion-img{
     width: 96%;
@@ -222,7 +231,7 @@ th,td,{
     border-radius: 3px;
     background-color: red;
     color: white;
-    font-family: 'PublicSans';
+    font-family: PublicSans;
     font-size: 12px;
     line-height: 17px;
     letter-spacing: 0.0916667px;
@@ -259,6 +268,31 @@ th,td,{
 }
 .dropdown:hover .dropdown-content{
     display: block;
+}
+.notif-link-color{
+    color: #4A72FF;
+}
+.bold{
+    font-weight: bold;
+}
+.all-link{
+    text-align: center;
+    font-family: Orkney;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.0916667px;
+    color: #7B7B7B;
+    font-weight: bold;
+}
+.notif-time{
+    font-family: ObjectSans;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.0916667px;
+    color: #979797;
+}
+.notif-highlight{
+    background-color: #F3F8FF;
 }
 
 

@@ -41,6 +41,7 @@ textarea{
 }
 .addDiv{
     margin: 10px 0 0 5px;
+    cursor: pointer;
 }
 .block{
     display: flex;
@@ -49,9 +50,61 @@ textarea{
     margin-left: 3%;
     width: 15%;
     cursor: pointer;
+    height: 4rem;
 }
 .addDocs{
     height: 1.5rem;
+}
+
+.submit-box{
+    position: relative;
+    margin-top: 10px;
+    margin-left: 60px;
+    width: 90%;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+}
+
+.save-btn{
+    height: 2rem;
+    font-family: PublicSans;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.0916667px;
+    color: #FFFFFF;
+    background: #4A72FF;
+    border-radius: 4px;
+    padding: 0 15px 0 15px;
+    margin-left: 10px;
+    float: right;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cancel-btn{
+    height: 2rem;
+    border: none;
+    font-family: PublicSans;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 0.0916667px;
+    color: #4A72FF;
+    background: #FAFAFA;
+    padding: 0 15px 0 15px;
+    float: right;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.version-box{
+    height: 90%;
+    color: #212121;
 }
 
 /*All the Fonts*/
