@@ -1,0 +1,76 @@
+.input-field{
+    padding: 5px;
+    font-family: Orkney;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.0916667px;
+    color: #212121;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-weight: bold;
+
+}
+textarea{
+    font-family: Orkney;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.0916667px;
+    color: #212121;
+}
+.textfield{
+    background: #FAFAFA;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    font-weight: normal;
+    padding: 10px 10px 20px 15px;
+    margin-bottom: 3px;
+    width: 96%;
+}
+.discussion-posts{
+    font-weight: normal;
+    padding-top: 5px;
+}
+.example{
+    font-family: PublicSans;
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.0916667px;
+    color: #979797;
+}
+.addDiv{
+    margin: 10px 0 0 5px;
+}
+.block{
+    display: flex;
+}
+.connection-btn{
+    margin-left: 3%;
+    width: 15%;
+    cursor: pointer;
+}
+.addDocs{
+    height: 1.5rem;
+}
+
+/*All the Fonts*/
+@font-face{
+    font-family: 'PublicSans';
+    src: url(../fonts/PublicSans-Regular.otf) format("opentype");
+}
+
+@font-face{
+    font-family: 'Orkney';
+    src: url(../fonts/orkney-regular.otf) format("opentype");
+}
+
+@font-face{
+    font-family: 'ObjectSans-Heavy';
+    src: url(../fonts/ObjectSans-Heavy.otf) format("opentype");
+}
+
+@font-face{
+    font-family: 'ObjectSans';
+    src: url(../fonts/ObjectSans-Regular.otf) format("opentype");
+}
