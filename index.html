@@ -4,8 +4,9 @@
         <title>Final Prototype</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="js/main.js"></script>
     </head>
-    <body>
+    <body onload="getData()">
         <nav>
             <div class="nav-item">
                 <img id="logo" src="images/logo.png">
@@ -115,11 +116,11 @@
                     <table>
                         <tr>
                             <th>Requirement Interpretation:</th>
-                            <td>The margin of error (± 500 pounds) has uniform distribution.</td>
+                            <td id="Interp">The margin of error (± 500 pounds) has uniform distribution.</td>
                         </tr>
                         <tr>
                             <th>Verification Documentation:</th>
-                            <td>
+                            <td id="Docs">
                                 DMM-CSE-0431-01 RS-25 CSE Performance Model – Power Level Tags
                                 <div>
                                     <img id="logo" src="icons/Connections.svg"><img class="align-btns" src="icons/AddBtn.svg">
@@ -128,7 +129,7 @@
                         </tr>
                         <tr>
                             <th>Rationale for Use:</th>
-                            <td>Assuming a uniform distribution of ±500 pounds allows us to quickly calculate uncertainty estimates.</td>
+                            <td id="Rationale">Assuming a uniform distribution of ±500 pounds allows us to quickly calculate uncertainty estimates.</td>
                         </tr>
                     </table>
                     <a href="edit.html"><img id="edit-btn" src="icons/Edit.svg"></a>
