@@ -1,27 +1,5 @@
-function saveData(){
-    
-    let interpretation = document.getElementById("Interp");
-    sessionStorage.setItem("Interpretation", interpretation.value);
-
-    let docs = document.getElementById("Docs");
-    sessionStorage.setItem("Documents", docs.value);
-
-    let rationale = document.getElementById("Rationale");
-    sessionStorage.setItem("Rationale", rationale.value);
-
-    let version = document.getElementById("Version");
-    sessionStorage.setItem("Version", version.value);
-
-    let description = document.getElementById("Desc");
-    sessionStorage.setItem("Description", description.value);
-
-    console.log(sessionStorage.getItem("Interpretation"));
-    console.log(sessionStorage.getItem("Documents"));
-    console.log(sessionStorage.getItem("Rationale"));
-    console.log(sessionStorage.getItem("Version"));
-    console.log(sessionStorage.getItem("Description"));
-
-}
+var check = "initial";
+var val = true;
 
 function getData(){
     
@@ -58,6 +36,15 @@ function getData(){
         parentNode.appendChild(childDiv);
         childDiv.appendChild(childImg1);
         childDiv.appendChild(childImg2);
+        
+        let cs = document.getElementById("comment-section");
+        cs.src = "Discussions/StartFade.svg";
+
+        setTimeout(function(){ 
+            let cs = document.getElementById("comment-section");
+            cs.src = "Discussions/Finish.svg";
+            check = "resolution";
+        }, 5000);
 
     }
     else{
@@ -65,6 +52,60 @@ function getData(){
         // document.getElementById("Docs").innerHTML = "DMM-CSE-0431-01 RS-25 CSE Performance Model – Power Level Tags.pdf";
         // document.getElementById("Rationale").innerHTML = "Assuming a uniform distribution of ±500 pounds allows us to quickly calculate uncertainty estimates. Since we have a set of minimum bounding limits for the distribution and found inputs in DMM-BST-0536 suggesting that the probability of obtaining values between the minimum bounding limits is uniform, uniform distribution is appropriate.";
     }
-    
+}
 
+function fadeDiscussion(){
+    if(check == "initial"){
+        let cs = document.getElementById("comment-section");
+        cs.src = "Discussions/StartFade.svg";
+    }
+    else if(check == "resolution"){ 
+        let cs = document.getElementById("comment-section");
+        cs.src = "Discussions/FinishFade.svg";
+    }
+}
+
+function openEditModal(){
+    let modal = document.getElementById("EditModal");
+    modal.style.display = "block";
+}
+
+function closeEditModal(){
+    let modal = document.getElementById("EditModal");
+    modal.style.display = "none";
+}
+
+window.onclick = function(event){
+    let editModal = document.getElementById("EditModal");
+    let attachModal = document.getElementById("AttachModal");
+    if(event.target == editModal){
+        editModal.style.display = "none";
+    }
+    else if(event.target == attachModal){
+        attachModal.style.display = "none";
+    }
+}
+
+function expandImg(){
+    let img = document.getElementById("edit-img");
+    console.log(val);
+    if(val == true){
+        img.src = "images/EditConnectionsExpanded.svg";
+        val = false;
+    }
+    else if(val == false){
+        img.src = "images/EditConnections.svg";
+        val = true;
+    }
+}
+
+
+function openAttachModal(){
+    let modal = document.getElementById("AttachModal");
+    modal.style.display = "block";
+}
+
+function closeAttachModal(){
+    let modal = document.getElementById("AttachModal");
+    modal.style.display = "none";
 }
