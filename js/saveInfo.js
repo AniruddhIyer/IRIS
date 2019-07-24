@@ -24,9 +24,14 @@ a.addEventListener("click", function(event){
         event.preventDefault();
         alert("Please Enter the Version Name!!");
     }
-    console.log(sessionStorage.getItem("Interpretation"));
-    console.log(sessionStorage.getItem("Documents"));
-    console.log(sessionStorage.getItem("Rationale"));
-    console.log(sessionStorage.getItem("Version"));
-    console.log(sessionStorage.getItem("Description"));
+    // console.log(sessionStorage.getItem("Interpretation"));
+    // console.log(sessionStorage.getItem("Documents"));
+    // console.log(sessionStorage.getItem("Rationale"));
+    // console.log(sessionStorage.getItem("Version"));
+    // console.log(sessionStorage.getItem("Description"));
+    
+    unread = sessionStorage.getItem("Unread");
+    unread = unread+1;
+    sessionStorage.setItem("Unread", unread);
+
 });

@@ -16,6 +16,8 @@ function getData(){
     if(interpretation && docs && rationale != null){
         
         document.getElementById("Interp").innerHTML = interpretation;
+
+        document.getElementById("version-name").innerHTML = version;
         
         parentNode = document.getElementById("Docs");
         parentNode.innerHTML = docs;
@@ -41,9 +43,26 @@ function getData(){
         cs.src = "Discussions/StartFade.svg";
 
         setTimeout(function(){ 
+
             let cs = document.getElementById("comment-section");
             cs.src = "Discussions/Finish.svg";
             check = "resolution";
+
+            let unread = sessionStorage.getItem("Unread");
+            let newNotif = document.getElementById("notif-id1");
+            newNotif.style.display = "flex";
+            if(unread == 0){
+                unread = Number(unread)+1;
+                let span = document.getElementById("unread-number");
+                span.style.display = "block";
+                span.innerHTML = String(unread);
+            }
+            else{
+                unread = Number(unread)+1;
+                let span = document.getElementById("unread-number");
+                span.innerHTML = String(unread);
+            }
+
         }, 5000);
 
     }
@@ -51,7 +70,11 @@ function getData(){
         // document.getElementById("Interp").innerHTML = "The margin of error (± 500 pounds) has uniform distribution.";
         // document.getElementById("Docs").innerHTML = "DMM-CSE-0431-01 RS-25 CSE Performance Model – Power Level Tags.pdf";
         // document.getElementById("Rationale").innerHTML = "Assuming a uniform distribution of ±500 pounds allows us to quickly calculate uncertainty estimates. Since we have a set of minimum bounding limits for the distribution and found inputs in DMM-BST-0536 suggesting that the probability of obtaining values between the minimum bounding limits is uniform, uniform distribution is appropriate.";
+        let newNotif = document.getElementById("notif-id1");
+        newNotif.style.display = "none";
     }
+    
+    // console.log(document.getElementsByClassName("notif-highlight"));
 }
 
 function fadeDiscussion(){
@@ -88,7 +111,7 @@ window.onclick = function(event){
 
 function expandImg(){
     let img = document.getElementById("edit-img");
-    console.log(val);
+    // console.log(val);
     if(val == true){
         img.src = "images/EditConnectionsExpanded.svg";
         val = false;
