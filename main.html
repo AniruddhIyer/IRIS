@@ -1,15 +1,20 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Final Prototype</title>
+        <title>IRIS</title>
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/edit.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="js/main.js"></script>
+        <script>
+            var unread = 2;
+            sessionStorage.setItem("Unread", unread);
+        </script>
     </head>
     <body onload="getData()">
         <nav>
             <div class="nav-item">
-                <img id="logo" src="images/logo.png">
+                <img id="logo" src="icons/IrisLogo.svg">
                 <!-- <div class="search"><i class="fa fa-search" id="search"></i><span id="search">Search</span></div> -->
             </div>
             <div class="nav-item-right">
@@ -28,7 +33,7 @@
                 <div class="nav-item">
                     <div class="nav-item-align">
                         <div class="dropdown">
-                            <img class="nav-icon" src="icons/NotificationIcon.svg"><span id="unread-number"class="badge">2</span>
+                            <img class="nav-icon" src="icons/NotificationIcon.svg"><span id="unread-number" class="badge">2</span>
                             <div class="nav-item-name">Notifications <i class="fa fa-caret-down"></i></div>
                             <div class="dropdown-content sidebar-font">
                                 <a href="#" id="notif-id1" onclick="readNotif1()" class="notif-highlight">
@@ -111,7 +116,15 @@
                 </div> 
             </div>
             <div class="bottom-section">
-                <span id="version-name" class="card-title" style="margin-left:60px;">Version 1</span><img class="link-icon" src="icons/VersionHistory.svg">
+
+                <div id="VersionModal" class="modal">
+                    <div class="modal-content-version">
+                        <span class="close" onclick="closeVersionModal()">&times;</span>
+                        <img class="modal-img" src="images/VersionHistory.svg"> <!-- This needs to be changed to the Version History Image-->
+                    </div>  
+                </div>
+
+                <span id="version-name" class="card-title" style="margin-left:60px;">Version 1</span><img class="link-icon" onclick="openVersionModal()" src="icons/VersionHistory.svg">
                 <div class="detail-box">
                     <table>
                         <tr>

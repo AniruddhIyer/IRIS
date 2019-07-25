@@ -99,13 +99,19 @@ function closeEditModal(){
 }
 
 window.onclick = function(event){
+    
     let editModal = document.getElementById("EditModal");
     let attachModal = document.getElementById("AttachModal");
+    let versionModal = document.getElementById("VersionModal");
+    
     if(event.target == editModal){
         editModal.style.display = "none";
     }
     else if(event.target == attachModal){
         attachModal.style.display = "none";
+    }
+    else if(event.target == versionModal){
+        versionModal.style.display = "none";
     }
 }
 
@@ -130,5 +136,16 @@ function openAttachModal(){
 
 function closeAttachModal(){
     let modal = document.getElementById("AttachModal");
+    modal.style.display = "none";
+}
+
+
+function openVersionModal(){
+    let modal = document.getElementById("VersionModal");
+    modal.style.display = "block";
+}
+
+function closeVersionModal(){
+    let modal = document.getElementById("VersionModal");
     modal.style.display = "none";
 }

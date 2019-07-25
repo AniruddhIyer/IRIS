@@ -1,16 +1,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Final Prototype</title>
+        <title>IRIS</title>
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/edit.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="js/main.js"></script>
+        <script src="js/notifications.js"></script>
     </head>
-    <body>
+    <body onload="getUnreadNumber()">
         <nav>
             <div class="nav-item">
-                <img id="logo" src="images/logo.png">
+                <img id="logo" src="icons/IrisLogo.svg">
                 <!-- <div class="search"><i class="fa fa-search" id="search"></i><span id="search">Search</span></div> -->
             </div>
             <div class="nav-item-right">
@@ -32,7 +33,7 @@
                             <img class="nav-icon" src="icons/NotificationIcon.svg"><span id="unread-number" class="badge">2</span>
                             <div class="nav-item-name">Notifications <i class="fa fa-caret-down"></i></div>
                             <div class="dropdown-content sidebar-font">
-                                <a href="#" id="no-display" class="notif-highlight">
+                                <a href="#" id="notif-id1" onclick="readNotif1()" class="notif-highlight">
                                     <div>
                                         <img id="logo" src="icons/Avionics.svg">
                                     </div>
@@ -43,7 +44,7 @@
                                         1m
                                     </div>
                                 </a>
-                                <a href="#" class="notif-highlight">
+                                <a href="#" id="notif-id2" onclick="readNotif2()" class="notif-highlight">
                                     <div>
                                         <img id="logo" src="icons/Avionics.svg">
                                     </div>
@@ -54,7 +55,7 @@
                                         1hr
                                     </div>
                                 </a>
-                                <a href="#" class="notif-highlight">
+                                <a href="#" id="notif-id3" onclick="readNotif3()" class="notif-highlight">
                                     <div>
                                         <img id="logo" src="icons/Avionics.svg">
                                     </div>
@@ -125,8 +126,7 @@
                         <span class="close" onclick="closeAttachModal()">&times;</span>
                         <img id="attach-img" class="modal-img" style="margin-top: 10px;" src="images/AttachModalTop.svg">
                         <div class="post-box">
-                            <input id="checkbox" type="checkbox" name="posts"/><img id="attach-img" class="modal-img-post" src="images/Post.svg">
-                            
+                            <input id="checkbox" type="checkbox" style="margin-top: 12px;" name="posts"/><img id="attach-img" class="modal-img-post" src="images/Post.svg"> 
                         </div>
                         <div class="post-save-box">
                             <img id="post-save-btn" class="modal-save-btn" onclick="closeAttachModal()" src="icons/SaveBtn.svg">
@@ -194,6 +194,6 @@
             </div>
         </div>
         <script src="js/saveInfo.js"></script>
-        <script src="js/notifications.js"></script>
+        
     </body>
 </html>

@@ -16,13 +16,15 @@ a.addEventListener("click", function(event){
     let description = document.getElementById("Desc");
     sessionStorage.setItem("Description", description.value);
 
-    if(description.value == ""){
-        event.preventDefault();
-        alert("Please Enter the Description of the Version!!");
-    }
     if(version.value == ""){
         event.preventDefault();
-        alert("Please Enter the Version Name!!");
+        // alert("Please Enter the Version Name!!");
+        version.style.border = "2px solid red";
+    }
+    if(description.value == ""){
+        event.preventDefault();
+        // alert("Please Enter the Description of the Version!!");
+        description.style.border = "2px solid red";
     }
     // console.log(sessionStorage.getItem("Interpretation"));
     // console.log(sessionStorage.getItem("Documents"));

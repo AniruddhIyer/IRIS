@@ -1,6 +1,3 @@
-var unread = 2;
-sessionStorage.setItem("Unread", unread);
-
 function readNotif1(){
     var id1 = document.getElementById("notif-id1");
     let span = document.getElementById("unread-number");
@@ -65,3 +62,11 @@ function readNotif3(){
     return;
 }
 
+
+function getUnreadNumber(){
+    console.log("here");
+    let span = document.getElementById("unread-number");
+    let unreadNo = sessionStorage.getItem("Unread");
+    span.innerHTML = String(unreadNo);
+
+}
