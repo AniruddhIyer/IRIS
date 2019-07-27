@@ -52,6 +52,9 @@ nav{
     height: 20px;
     margin-bottom: 5px;
 }
+#home-color{
+    color: #FFFFFF;
+}
 /* .search{
     background-color: #FEFEFE;
     height: 30px;
