@@ -63,7 +63,7 @@ function getData(){
                 span.innerHTML = String(unread);
             }
 
-        }, 10000);
+        }, 15000);
 
     }
     else{
